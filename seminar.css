@@ -1,0 +1,231 @@
+/* seminar.CSS 4.10 February 2018 by Jan Egil and Borge Refsnes */
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
+audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
+audio:not([controls]){display:none;height:0}[hidden],template{display:none}
+a{background-color:transparent;-webkit-text-decoration-skip:objects}
+a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+dfn{font-style:italic}mark{background:#ff0;color:#000}
+small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}svg:not(:root){overflow:hidden}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
+button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:bold}
+button,input{overflow:visible}button,select{text-transform:none}
+button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner{border-style:none;padding:0}
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring{outline:1px dotted ButtonText}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
+[type=checkbox],[type=radio]{padding:0}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+::-webkit-input-placeholder{color:inherit;opacity:0.54}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+/* End extract */
+html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
+h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}.seminar-serif{font-family:serif}
+h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.seminar-wide{letter-spacing:4px}
+hr{border:0;border-top:1px solid #eee;margin:20px 0}
+.seminar-image{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}
+.seminar-table,.seminar-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.seminar-table-all{border:1px solid #ccc}
+.seminar-bordered tr,.seminar-table-all tr{border-bottom:1px solid #ddd}.seminar-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+.seminar-table-all tr:nth-child(odd){background-color:#fff}.seminar-table-all tr:nth-child(even){background-color:#f1f1f1}
+.seminar-hoverable tbody tr:hover,.seminar-ul.seminar-hoverable li:hover{background-color:#ccc}.seminar-centered tr th,.seminar-centered tr td{text-align:center}
+.seminar-table td,.seminar-table th,.seminar-table-all td,.seminar-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+.seminar-table th:first-child,.seminar-table td:first-child,.seminar-table-all th:first-child,.seminar-table-all td:first-child{padding-left:16px}
+.seminar-btn,.seminar-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.seminar-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+.seminar-btn,.seminar-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+.seminar-disabled,.seminar-btn:disabled,.seminar-button:disabled{cursor:not-allowed;opacity:0.3}.seminar-disabled *,:disabled *{pointer-events:none}
+.seminar-btn.seminar-disabled:hover,.seminar-btn:disabled:hover{box-shadow:none}
+.seminar-badge,.seminar-tag{background-color:#000;color:#fff;display:inline-block;padding-left:8px;padding-right:8px;text-align:center}.seminar-badge{border-radius:50%}
+.seminar-ul{list-style-type:none;padding:0;margin:0}.seminar-ul li{padding:8px 16px;border-bottom:1px solid #ddd}.seminar-ul li:last-child{border-bottom:none}
+.seminar-tooltip,.seminar-display-container{position:relative}.seminar-tooltip .seminar-text{display:none}.seminar-tooltip:hover .seminar-text{display:inline-block}
+.seminar-ripple:active{opacity:0.5}.seminar-ripple{transition:opacity 0s}
+.seminar-input{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
+.seminar-select{padding:9px 0;width:100%;border:none;border-bottom:1px solid #ccc}
+.seminar-dropdown-click,.seminar-dropdown-hover{position:relative;display:inline-block;cursor:pointer}
+.seminar-dropdown-hover:hover .seminar-dropdown-content{display:block}
+.seminar-dropdown-hover:first-child,.seminar-dropdown-click:hover{background-color:#ccc;color:#000}
+.seminar-dropdown-hover:hover > .seminar-button:first-child,.seminar-dropdown-click:hover > .seminar-button:first-child{background-color:#ccc;color:#000}
+.seminar-dropdown-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0;z-index:1}
+.seminar-check,.seminar-radio{width:24px;height:24px;position:relative;top:6px}
+.seminar-sidebar{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
+.seminar-bar-block .seminar-dropdown-hover,.seminar-bar-block .seminar-dropdown-click{width:100%}
+.seminar-bar-block .seminar-dropdown-hover .seminar-dropdown-content,.seminar-bar-block .seminar-dropdown-click .seminar-dropdown-content{min-width:100%}
+.seminar-bar-block .seminar-dropdown-hover .seminar-button,.seminar-bar-block .seminar-dropdown-click .seminar-button{width:100%;text-align:left;padding:8px 16px}
+.seminar-main,#main{transition:margin-left .4s}
+.seminar-modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
+.seminar-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+.seminar-bar{width:100%;overflow:hidden}.seminar-center .seminar-bar{display:inline-block;width:auto}
+.seminar-bar .seminar-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
+.seminar-bar .seminar-dropdown-hover,.seminar-bar .seminar-dropdown-click{position:static;float:left}
+.seminar-bar .seminar-button{white-space:normal}
+.seminar-bar-block .seminar-bar-item{width:100%;display:block;padding:8px 16px;text-align:left;border:none;white-space:normal;float:none;outline:0}
+.seminar-bar-block.seminar-center .seminar-bar-item{text-align:center}.seminar-block{display:block;width:100%}
+.seminar-responsive{display:block;overflow-x:auto}
+.seminar-container:after,.seminar-container:before,.seminar-panel:after,.seminar-panel:before,.seminar-row:after,.seminar-row:before,.seminar-row-padding:after,.seminar-row-padding:before,
+.seminar-cell-row:before,.seminar-cell-row:after,.seminar-clear:after,.seminar-clear:before,.seminar-bar:before,.seminar-bar:after{content:"";display:table;clear:both}
+.seminar-col,.seminar-half,.seminar-third,.seminar-twothird,.seminar-threequarter,.seminar-quarter{float:left;width:100%}
+.seminar-col.s1{width:8.33333%}.seminar-col.s2{width:16.66666%}.seminar-col.s3{width:24.99999%}.seminar-col.s4{width:33.33333%}
+.seminar-col.s5{width:41.66666%}.seminar-col.s6{width:49.99999%}.seminar-col.s7{width:58.33333%}.seminar-col.s8{width:66.66666%}
+.seminar-col.s9{width:74.99999%}.seminar-col.s10{width:83.33333%}.seminar-col.s11{width:91.66666%}.seminar-col.s12{width:99.99999%}
+@media (min-width:601px){.seminar-col.m1{width:8.33333%}.seminar-col.m2{width:16.66666%}.seminar-col.m3,.seminar-quarter{width:24.99999%}.seminar-col.m4,.seminar-third{width:33.33333%}
+.seminar-col.m5{width:41.66666%}.seminar-col.m6,.seminar-half{width:49.99999%}.seminar-col.m7{width:58.33333%}.seminar-col.m8,.seminar-twothird{width:66.66666%}
+.seminar-col.m9,.seminar-threequarter{width:74.99999%}.seminar-col.m10{width:83.33333%}.seminar-col.m11{width:91.66666%}.seminar-col.m12{width:99.99999%}}
+@media (min-width:993px){.seminar-col.l1{width:8.33333%}.seminar-col.l2{width:16.66666%}.seminar-col.l3{width:24.99999%}.seminar-col.l4{width:33.33333%}
+.seminar-col.l5{width:41.66666%}.seminar-col.l6{width:49.99999%}.seminar-col.l7{width:58.33333%}.seminar-col.l8{width:66.66666%}
+.seminar-col.l9{width:74.99999%}.seminar-col.l10{width:83.33333%}.seminar-col.l11{width:91.66666%}.seminar-col.l12{width:99.99999%}}
+.seminar-content{max-width:980px;margin:auto}.seminar-rest{overflow:hidden}
+.seminar-cell-row{display:table;width:100%}.seminar-cell{display:table-cell}
+.seminar-cell-top{vertical-align:top}.seminar-cell-middle{vertical-align:middle}.seminar-cell-bottom{vertical-align:bottom}
+.seminar-hide{display:none!important}.seminar-show-block,.seminar-show{display:block!important}.seminar-show-inline-block{display:inline-block!important}
+@media (max-width:600px){.seminar-modal-content{margin:0 10px;width:auto!important}.seminar-modal{padding-top:30px}
+.seminar-dropdown-hover.seminar-mobile .seminar-dropdown-content,.seminar-dropdown-click.seminar-mobile .seminar-dropdown-content{position:relative}	
+.seminar-hide-small{display:none!important}.seminar-mobile{display:block;width:100%!important}.seminar-bar-item.seminar-mobile,.seminar-dropdown-hover.seminar-mobile,.seminar-dropdown-click.seminar-mobile{text-align:center}
+.seminar-dropdown-hover.seminar-mobile,.seminar-dropdown-hover.seminar-mobile .seminar-btn,.seminar-dropdown-hover.seminar-mobile .seminar-button,.seminar-dropdown-click.seminar-mobile,.seminar-dropdown-click.seminar-mobile .seminar-btn,.seminar-dropdown-click.seminar-mobile .seminar-button{width:100%}}
+@media (max-width:768px){.seminar-modal-content{width:500px}.seminar-modal{padding-top:50px}}
+@media (min-width:993px){.seminar-modal-content{width:900px}.seminar-hide-large{display:none!important}.seminar-sidebar.seminar-collapse{display:block!important}}
+@media (max-width:992px) and (min-width:601px){.seminar-hide-medium{display:none!important}}
+@media (max-width:992px){.seminar-sidebar.seminar-collapse{display:none}.seminar-main{margin-left:0!important;margin-right:0!important}}
+.seminar-top,.seminar-bottom{position:fixed;width:100%;z-index:1}.seminar-top{top:0}.seminar-bottom{bottom:0}
+.seminar-overlay{position:fixed;display:none;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.5);z-index:2}
+.seminar-display-topleft{position:absolute;left:0;top:0}.seminar-display-topright{position:absolute;right:0;top:0}
+.seminar-display-bottomleft{position:absolute;left:0;bottom:0}.seminar-display-bottomright{position:absolute;right:0;bottom:0}
+.seminar-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+.seminar-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.seminar-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.seminar-display-topmiddle{position:absolute;left:50%;top:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.seminar-display-bottommiddle{position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.seminar-display-container:hover .seminar-display-hover{display:block}.seminar-display-container:hover span.seminar-display-hover{display:inline-block}.seminar-display-hover{display:none}
+.seminar-display-position{position:absolute}
+.seminar-circle{border-radius:50%}
+.seminar-round-small{border-radius:2px}.seminar-round,.seminar-round-medium{border-radius:4px}.seminar-round-large{border-radius:8px}.seminar-round-xlarge{border-radius:16px}.seminar-round-xxlarge{border-radius:32px}
+.seminar-row-padding,.seminar-row-padding>.seminar-half,.seminar-row-padding>.seminar-third,.seminar-row-padding>.seminar-twothird,.seminar-row-padding>.seminar-threequarter,.seminar-row-padding>.seminar-quarter,.seminar-row-padding>.seminar-col{padding:0 8px}
+.seminar-container,.seminar-panel{padding:0.01em 16px}.seminar-panel{margin-top:16px;margin-bottom:16px}
+.seminar-code,.seminar-codespan{font-family:Consolas,"courier new";font-size:16px}
+.seminar-code{width:auto;background-color:#fff;padding:8px 12px;border-left:4px solid #4CAF50;word-wrap:break-word}
+.seminar-codespan{color:crimson;background-color:#f1f1f1;padding-left:4px;padding-right:4px;font-size:110%}
+.seminar-card,.seminar-card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+.seminar-card-4,.seminar-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+.seminar-spin{animation:seminar-spin 2s infinite linear}@keyframes seminar-spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}
+.seminar-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+.seminar-animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
+.seminar-animate-top{position:relative;animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+.seminar-animate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+.seminar-animate-right{position:relative;animation:animateright 0.4s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+.seminar-animate-bottom{position:relative;animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+.seminar-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+.seminar-animate-input{transition:width 0.4s ease-in-out}.seminar-animate-input:focus{width:100%!important}
+.seminar-opacity,.seminar-hover-opacity:hover{opacity:0.60}.seminar-opacity-off,.seminar-hover-opacity-off:hover{opacity:1}
+.seminar-opacity-max{opacity:0.25}.seminar-opacity-min{opacity:0.75}
+.seminar-greyscale-max,.seminar-grayscale-max,.seminar-hover-greyscale:hover,.seminar-hover-grayscale:hover{filter:grayscale(100%)}
+.seminar-greyscale,.seminar-grayscale{filter:grayscale(75%)}.seminar-greyscale-min,.seminar-grayscale-min{filter:grayscale(50%)}
+.seminar-sepia{filter:sepia(75%)}.seminar-sepia-max,.seminar-hover-sepia:hover{filter:sepia(100%)}.seminar-sepia-min{filter:sepia(50%)}
+.seminar-tiny{font-size:10px!important}.seminar-small{font-size:12px!important}.seminar-medium{font-size:15px!important}.seminar-large{font-size:18px!important}
+.seminar-xlarge{font-size:24px!important}.seminar-xxlarge{font-size:36px!important}.seminar-xxxlarge{font-size:48px!important}.seminar-jumbo{font-size:64px!important}
+.seminar-left-align{text-align:left!important}.seminar-right-align{text-align:right!important}.seminar-justify{text-align:justify!important}.seminar-center{text-align:center!important}
+.seminar-border-0{border:0!important}.seminar-border{border:1px solid #ccc!important}
+.seminar-border-top{border-top:1px solid #ccc!important}.seminar-border-bottom{border-bottom:1px solid #ccc!important}
+.seminar-border-left{border-left:1px solid #ccc!important}.seminar-border-right{border-right:1px solid #ccc!important}
+.seminar-topbar{border-top:6px solid #ccc!important}.seminar-bottombar{border-bottom:6px solid #ccc!important}
+.seminar-leftbar{border-left:6px solid #ccc!important}.seminar-rightbar{border-right:6px solid #ccc!important}
+.seminar-section,.seminar-code{margin-top:16px!important;margin-bottom:16px!important}
+.seminar-margin{margin:16px!important}.seminar-margin-top{margin-top:16px!important}.seminar-margin-bottom{margin-bottom:16px!important}
+.seminar-margin-left{margin-left:16px!important}.seminar-margin-right{margin-right:16px!important}
+.seminar-padding-small{padding:4px 8px!important}.seminar-padding{padding:8px 16px!important}.seminar-padding-large{padding:12px 24px!important}
+.seminar-padding-16{padding-top:16px!important;padding-bottom:16px!important}.seminar-padding-24{padding-top:24px!important;padding-bottom:24px!important}
+.seminar-padding-32{padding-top:32px!important;padding-bottom:32px!important}.seminar-padding-48{padding-top:48px!important;padding-bottom:48px!important}
+.seminar-padding-64{padding-top:64px!important;padding-bottom:64px!important}
+.seminar-left{float:left!important}.seminar-right{float:right!important}
+.seminar-button:hover{color:#000!important;background-color:#ccc!important}
+.seminar-transparent,.seminar-hover-none:hover{background-color:transparent!important}
+.seminar-hover-none:hover{box-shadow:none!important}
+/* Colors */
+.seminar-amber,.seminar-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
+.seminar-aqua,.seminar-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
+.seminar-blue,.seminar-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
+.seminar-light-blue,.seminar-hover-light-blue:hover{color:#000!important;background-color:#87CEEB!important}
+.seminar-brown,.seminar-hover-brown:hover{color:#fff!important;background-color:#795548!important}
+.seminar-cyan,.seminar-hover-cyan:hover{color:#000!important;background-color:#00bcd4!important}
+.seminar-blue-grey,.seminar-hover-blue-grey:hover,.seminar-blue-gray,.seminar-hover-blue-gray:hover{color:#fff!important;background-color:#607d8b!important}
+.seminar-green,.seminar-hover-green:hover{color:#fff!important;background-color:#4CAF50!important}
+.seminar-light-green,.seminar-hover-light-green:hover{color:#000!important;background-color:#8bc34a!important}
+.seminar-indigo,.seminar-hover-indigo:hover{color:#fff!important;background-color:#3f51b5!important}
+.seminar-khaki,.seminar-hover-khaki:hover{color:#000!important;background-color:#f0e68c!important}
+.seminar-lime,.seminar-hover-lime:hover{color:#000!important;background-color:#cddc39!important}
+.seminar-orange,.seminar-hover-orange:hover{color:#000!important;background-color:#ff9800!important}
+.seminar-deep-orange,.seminar-hover-deep-orange:hover{color:#fff!important;background-color:#ff5722!important}
+.seminar-pink,.seminar-hover-pink:hover{color:#fff!important;background-color:#e91e63!important}
+.seminar-purple,.seminar-hover-purple:hover{color:#fff!important;background-color:#9c27b0!important}
+.seminar-deep-purple,.seminar-hover-deep-purple:hover{color:#fff!important;background-color:#673ab7!important}
+.seminar-red,.seminar-hover-red:hover{color:#fff!important;background-color:#f44336!important}
+.seminar-sand,.seminar-hover-sand:hover{color:#000!important;background-color:#fdf5e6!important}
+.seminar-teal,.seminar-hover-teal:hover{color:#fff!important;background-color:#009688!important}
+.seminar-yellow,.seminar-hover-yellow:hover{color:#000!important;background-color:#ffeb3b!important}
+.seminar-white,.seminar-hover-white:hover{color:#000!important;background-color:#fff!important}
+.seminar-black,.seminar-hover-black:hover{color:#fff!important;background-color:#000!important}
+.seminar-grey,.seminar-hover-grey:hover,.seminar-gray,.seminar-hover-gray:hover{color:#000!important;background-color:#9e9e9e!important}
+.seminar-light-grey,.seminar-hover-light-grey:hover,.seminar-light-gray,.seminar-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+.seminar-dark-grey,.seminar-hover-dark-grey:hover,.seminar-dark-gray,.seminar-hover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
+.seminar-pale-red,.seminar-hover-pale-red:hover{color:#000!important;background-color:#ffdddd!important}
+.seminar-pale-green,.seminar-hover-pale-green:hover{color:#000!important;background-color:#ddffdd!important}
+.seminar-pale-yellow,.seminar-hover-pale-yellow:hover{color:#000!important;background-color:#ffffcc!important}
+.seminar-pale-blue,.seminar-hover-pale-blue:hover{color:#000!important;background-color:#ddffff!important}
+.seminar-text-amber,.seminar-hover-text-amber:hover{color:#ffc107!important}
+.seminar-text-aqua,.seminar-hover-text-aqua:hover{color:#00ffff!important}
+.seminar-text-blue,.seminar-hover-text-blue:hover{color:#2196F3!important}
+.seminar-text-light-blue,.seminar-hover-text-light-blue:hover{color:#87CEEB!important}
+.seminar-text-brown,.seminar-hover-text-brown:hover{color:#795548!important}
+.seminar-text-cyan,.seminar-hover-text-cyan:hover{color:#00bcd4!important}
+.seminar-text-blue-grey,.seminar-hover-text-blue-grey:hover,.seminar-text-blue-gray,.seminar-hover-text-blue-gray:hover{color:#607d8b!important}
+.seminar-text-green,.seminar-hover-text-green:hover{color:#4CAF50!important}
+.seminar-text-light-green,.seminar-hover-text-light-green:hover{color:#8bc34a!important}
+.seminar-text-indigo,.seminar-hover-text-indigo:hover{color:#3f51b5!important}
+.seminar-text-khaki,.seminar-hover-text-khaki:hover{color:#b4aa50!important}
+.seminar-text-lime,.seminar-hover-text-lime:hover{color:#cddc39!important}
+.seminar-text-orange,.seminar-hover-text-orange:hover{color:#ff9800!important}
+.seminar-text-deep-orange,.seminar-hover-text-deep-orange:hover{color:#ff5722!important}
+.seminar-text-pink,.seminar-hover-text-pink:hover{color:#e91e63!important}
+.seminar-text-purple,.seminar-hover-text-purple:hover{color:#9c27b0!important}
+.seminar-text-deep-purple,.seminar-hover-text-deep-purple:hover{color:#673ab7!important}
+.seminar-text-red,.seminar-hover-text-red:hover{color:#f44336!important}
+.seminar-text-sand,.seminar-hover-text-sand:hover{color:#fdf5e6!important}
+.seminar-text-teal,.seminar-hover-text-teal:hover{color:#009688!important}
+.seminar-text-yellow,.seminar-hover-text-yellow:hover{color:#d2be0e!important}
+.seminar-text-white,.seminar-hover-text-white:hover{color:#fff!important}
+.seminar-text-black,.seminar-hover-text-black:hover{color:#000!important}
+.seminar-text-grey,.seminar-hover-text-grey:hover,.seminar-text-gray,.seminar-hover-text-gray:hover{color:#757575!important}
+.seminar-text-light-grey,.seminar-hover-text-light-grey:hover,.seminar-text-light-gray,.seminar-hover-text-light-gray:hover{color:#f1f1f1!important}
+.seminar-text-dark-grey,.seminar-hover-text-dark-grey:hover,.seminar-text-dark-gray,.seminar-hover-text-dark-gray:hover{color:#3a3a3a!important}
+.seminar-border-amber,.seminar-hover-border-amber:hover{border-color:#ffc107!important}
+.seminar-border-aqua,.seminar-hover-border-aqua:hover{border-color:#00ffff!important}
+.seminar-border-blue,.seminar-hover-border-blue:hover{border-color:#2196F3!important}
+.seminar-border-light-blue,.seminar-hover-border-light-blue:hover{border-color:#87CEEB!important}
+.seminar-border-brown,.seminar-hover-border-brown:hover{border-color:#795548!important}
+.seminar-border-cyan,.seminar-hover-border-cyan:hover{border-color:#00bcd4!important}
+.seminar-border-blue-grey,.seminar-hover-border-blue-grey:hover,.seminar-border-blue-gray,.seminar-hover-border-blue-gray:hover{border-color:#607d8b!important}
+.seminar-border-green,.seminar-hover-border-green:hover{border-color:#4CAF50!important}
+.seminar-border-light-green,.seminar-hover-border-light-green:hover{border-color:#8bc34a!important}
+.seminar-border-indigo,.seminar-hover-border-indigo:hover{border-color:#3f51b5!important}
+.seminar-border-khaki,.seminar-hover-border-khaki:hover{border-color:#f0e68c!important}
+.seminar-border-lime,.seminar-hover-border-lime:hover{border-color:#cddc39!important}
+.seminar-border-orange,.seminar-hover-border-orange:hover{border-color:#ff9800!important}
+.seminar-border-deep-orange,.seminar-hover-border-deep-orange:hover{border-color:#ff5722!important}
+.seminar-border-pink,.seminar-hover-border-pink:hover{border-color:#e91e63!important}
+.seminar-border-purple,.seminar-hover-border-purple:hover{border-color:#9c27b0!important}
+.seminar-border-deep-purple,.seminar-hover-border-deep-purple:hover{border-color:#673ab7!important}
+.seminar-border-red,.seminar-hover-border-red:hover{border-color:#f44336!important}
+.seminar-border-sand,.seminar-hover-border-sand:hover{border-color:#fdf5e6!important}
+.seminar-border-teal,.seminar-hover-border-teal:hover{border-color:#009688!important}
+.seminar-border-yellow,.seminar-hover-border-yellow:hover{border-color:#ffeb3b!important}
+.seminar-border-white,.seminar-hover-border-white:hover{border-color:#fff!important}
+.seminar-border-black,.seminar-hover-border-black:hover{border-color:#000!important}
+.seminar-border-grey,.seminar-hover-border-grey:hover,.seminar-border-gray,.seminar-hover-border-gray:hover{border-color:#9e9e9e!important}
+.seminar-border-light-grey,.seminar-hover-border-light-grey:hover,.seminar-border-light-gray,.seminar-hover-border-light-gray:hover{border-color:#f1f1f1!important}
+.seminar-border-dark-grey,.seminar-hover-border-dark-grey:hover,.seminar-border-dark-gray,.seminar-hover-border-dark-gray:hover{border-color:#616161!important}
+.seminar-border-pale-red,.seminar-hover-border-pale-red:hover{border-color:#ffe7e7!important}.seminar-border-pale-green,.seminar-hover-border-pale-green:hover{border-color:#e7ffe7!important}
+.seminar-border-pale-yellow,.seminar-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.seminar-border-pale-blue,.seminar-hover-border-pale-blue:hover{border-color:#e7ffff!important}
